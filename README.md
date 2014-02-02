@@ -6,12 +6,14 @@ See `node-results.txt` and `spray-results.txt` for `wrk` benchmark results.
 
 You can checkout the repo and do benchmarking yourself. 
 
-Starting Node.js app:
+Benchmarking Node.js app:
 
     $ cd node
-    $ node main.js
+    $ node main.js &
+    $ ../do-benchmark.sh http://127.0.0.1:8080/
 
 Starting Spray (Scala) app:
 
     $ cd spray
     $ sbt run
+    $ ../do-benchmark.sh http://127.0.0.1:8080/
