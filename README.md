@@ -15,5 +15,5 @@ Benchmarking Node.js app:
 Starting Spray (Scala) app:
 
     $ cd spray
-    $ sbt run
+    $ sbt run &
     $ ../do-benchmark.sh http://127.0.0.1:8080/
