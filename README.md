@@ -1,4 +1,4 @@
-# Node.js vs. Spray
+# Node.js vs. Spray.io vs. Erlang
 
 Comparison of [Node.js](http://nodejs.org) and [Spray](http://spray.io/) performance.
 
