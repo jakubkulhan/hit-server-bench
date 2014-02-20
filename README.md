@@ -23,6 +23,6 @@ Starting Erlang app:
     $ cd erlang
     $ elr
     $ c(erlanghttp).
-    $ erlanghttp:start()
+    $ erlanghttp:start().
     Open new terminal window
     $ ../do-benchmark.sh http://127.0.0.1:8080/
