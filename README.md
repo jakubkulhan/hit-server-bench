@@ -17,3 +17,12 @@ Starting Spray (Scala) app:
     $ cd spray
     $ sbt run &
     $ ../do-benchmark.sh http://127.0.0.1:8080/
+
+Starting Erlang app:
+
+    $ cd erlang
+    $ elr
+    $ c(erlanghttp).
+    $ erlanghttp:start()
+    Open new terminal window
+    $ ../do-benchmark.sh http://127.0.0.1:8080/
