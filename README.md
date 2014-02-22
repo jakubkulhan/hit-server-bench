@@ -1,4 +1,4 @@
-# Node.js vs. Spray
+# Node.js vs. Spray.io vs. Erlang
 
 Comparison of [Node.js](http://nodejs.org) and [Spray](http://spray.io/) performance.
 
@@ -16,4 +16,13 @@ Starting Spray (Scala) app:
 
     $ cd spray
     $ sbt run &
+    $ ../do-benchmark.sh http://127.0.0.1:8080/
+
+Starting Erlang app:
+
+    $ cd erlang
+    $ elr
+    $ c(erlanghttp).
+    $ erlanghttp:start().
+    Open new terminal window
     $ ../do-benchmark.sh http://127.0.0.1:8080/
