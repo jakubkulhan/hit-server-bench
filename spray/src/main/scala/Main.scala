@@ -12,7 +12,7 @@ object Main extends App {
         sender ! Http.Register(self)
 
       case _: HttpRequest => 
-        sender ! HttpResponse(StatusCodes.OK, entity = "ok")
+        sender ! HttpResponse(StatusCodes.OK, entity = System.currentTimeMillis().toString)
     }
 
   }

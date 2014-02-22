@@ -5,7 +5,7 @@
 (defn server [req]
   {:status  200
    :headers {"Content-Type" "text/plain"}
-   :body    "ok"})
+   :body    (.toString (. System currentTimeMillis))})
 
 (defn -main [& args]
   (run-server server {:port 8080}))

@@ -2,35 +2,35 @@ $ wrk -t 1 -c 1 -d 10 http://127.0.0.1:8080
 Running 10s test @ http://127.0.0.1:8080
   1 threads and 1 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   136.04us   24.57us 450.00us   89.88%
-    Req/Sec     7.03k   708.71     8.22k    70.11%
-  66724 requests in 10.00s, 7.83MB read
-Requests/sec:   6672.67
-Transfer/sec:    801.50KB
+    Latency   134.53us   16.37us 395.00us   73.93%
+    Req/Sec     7.15k   503.79     8.11k    70.39%
+  67502 requests in 10.00s, 8.69MB read
+Requests/sec:   6750.29
+Transfer/sec:      0.87MB
 $ wrk -t 2 -c 10 -d 10 http://127.0.0.1:8080
 Running 10s test @ http://127.0.0.1:8080
   2 threads and 10 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   624.31us  321.58us   6.27ms   83.31%
-    Req/Sec     8.20k     1.30k   10.56k    68.18%
-  155951 requests in 10.00s, 18.29MB read
-Requests/sec:  15595.27
-Transfer/sec:      1.83MB
+    Latency   612.43us  266.04us   4.75ms   77.62%
+    Req/Sec     8.21k     0.96k   10.44k    74.99%
+  155738 requests in 10.00s, 20.05MB read
+Requests/sec:  15574.33
+Transfer/sec:      2.01MB
 $ wrk -t 10 -c 50 -d 10 http://127.0.0.1:8080
 Running 10s test @ http://127.0.0.1:8080
   10 threads and 50 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     3.48ms    3.02ms  39.82ms   76.30%
-    Req/Sec     1.61k   414.93     3.44k    72.55%
-  153710 requests in 10.00s, 18.03MB read
-Requests/sec:  15373.17
-Transfer/sec:      1.80MB
+    Latency     3.89ms    2.60ms  26.81ms   76.26%
+    Req/Sec     1.41k   330.56     3.30k    72.69%
+  134556 requests in 10.00s, 17.32MB read
+Requests/sec:  13455.14
+Transfer/sec:      1.73MB
 $ wrk -t 20 -c 100 -d 10 http://127.0.0.1:8080
 Running 10s test @ http://127.0.0.1:8080
   20 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     7.00ms    6.47ms  66.23ms   76.20%
-    Req/Sec   814.34    230.38     2.31k    70.26%
-  154110 requests in 10.00s, 18.08MB read
-Requests/sec:  15410.90
-Transfer/sec:      1.81MB
+    Latency     7.21ms    3.46ms  25.67ms   76.82%
+    Req/Sec   731.92    147.72     1.67k    72.23%
+  139294 requests in 10.00s, 17.93MB read
+Requests/sec:  13931.52
+Transfer/sec:      1.79MB
