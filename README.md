@@ -21,7 +21,7 @@ Starting Spray (Scala) app:
 Starting Erlang app:
 
     $ cd erlang
-    $ elr
+    $ erl
     $ c(erlanghttp).
     $ erlanghttp:start().
     Open new terminal window
