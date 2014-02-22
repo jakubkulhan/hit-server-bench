@@ -1,21 +1,28 @@
-# Node.js vs. Spray.io vs. Erlang
+# Node.js vs. Spray vs. Erlang vs. Http-kit
 
-Comparison of [Node.js](http://nodejs.org) and [Spray](http://spray.io/) performance.
+Comparison of raw HTTP hit performance of:
 
-See `node-results.txt` and `spray-results.txt` for `wrk` benchmark results.
+- [Node.js](http://nodejs.org)
+- [Spray (Scala)](http://spray.io)
+- [Erlang HTTP server](http://erlang.org/doc/apps/inets/http_server.html)
+- [Http-kit (Clojure)](http://http-kit.org/index.html)
+
+See `*-results.txt` for `wrk` benchmark results.
 
 You can checkout the repo and do benchmarking yourself. 
 
-Benchmarking Node.js app:
+Starting Node.js app:
 
     $ cd node
-    $ node main.js &
+    $ node main.js
+    Open new terminal window.
     $ ../do-benchmark.sh http://127.0.0.1:8080/
 
 Starting Spray (Scala) app:
 
     $ cd spray
-    $ sbt run &
+    $ sbt run
+    Open new terminal window.
     $ ../do-benchmark.sh http://127.0.0.1:8080/
 
 Starting Erlang app:
@@ -24,5 +31,12 @@ Starting Erlang app:
     $ erl
     $ c(erlanghttp).
     $ erlanghttp:start().
-    Open new terminal window
+    Open new terminal window.
     $ ../do-benchmark.sh http://127.0.0.1:8080/
+
+Starting Http-kit app:
+
+    $ cd httpkit
+    $ lein run
+    Open new terminal window.
+    $ ../do-benchmark.sh http://127.0.0.1:8080/
