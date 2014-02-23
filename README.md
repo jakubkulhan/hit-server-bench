@@ -9,7 +9,7 @@ Comparison of raw HTTP hit performance of:
 
 See `*-results.txt` for `wrk` benchmark results.
 
-You can checkout the repo and do benchmarking yourself. 
+You can checkout the repo and do benchmarking yourself.
 
 Starting Node.js app:
 
@@ -40,3 +40,14 @@ Starting Http-kit app:
     $ lein run
     Open new terminal window.
     $ ../do-benchmark.sh http://127.0.0.1:8080/
+
+Starting Warp (Haskell) app:
+
+    $ cd warp
+    $ ./warped
+    Open new terminal window.
+    $ ../do-benchmark.sh http://127.0.0.1:8080/
+
+    # To compile, run:
+    $ cd warp
+    $ ghc -O3 warped.hs
