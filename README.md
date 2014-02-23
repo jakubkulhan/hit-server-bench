@@ -1,4 +1,4 @@
-# Node.js vs. Spray vs. Erlang vs. Http-kit vs. Warp
+# Node.js vs. Spray vs. Erlang vs. Http-kit vs. Warp vs. Tornado
 
 Comparison of raw HTTP hit performance of:
 
@@ -7,6 +7,7 @@ Comparison of raw HTTP hit performance of:
 - [Erlang HTTP server](http://erlang.org/doc/apps/inets/http_server.html)
 - [Http-kit (Clojure)](http://http-kit.org/index.html)
 - [Warp (Haskell)](http://hackage.haskell.org/package/warp)
+- [Tornado](http://www.tornadoweb.org/en/stable/)
 
 ## Results
 
@@ -19,6 +20,7 @@ See `*-results.txt` for `wrk` benchmark results.
 | Erlang      |               6750.29 |               15574.33 |               13455.14 |                13931.52 |
 | Http-kit    |              10145.90 |               34416.03 |               36520.01 |                34391.64 |
 | Warp        |              12640.29 |               27749.54 |               26365.52 |                23916.69 |
+| Tornado     |               2356.82 |                4590.33 |                4422.08 |                 4155.61 |
 
 
 ## I don't believe you!
