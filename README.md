@@ -12,6 +12,8 @@ Comparison of raw HTTP hit performance of:
 
 See `*-results.txt` for `wrk` benchmark results.
 
+C = Concurrency
+
 | Environment | Language    | C=1         | C=10        | C=50        | C=100       |
 |-------------|------------:|------------:|------------:|------------:|------------:|
 | Node.js     | Javascript  | 8590.95     | 19619.37    | 19217.57    | 19606.67    |
