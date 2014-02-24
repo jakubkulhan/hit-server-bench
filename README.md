@@ -68,6 +68,13 @@ Starting Warp (Haskell) app:
     $ cd warp
     $ ghc -O3 warped.hs
 
+Starting Puma + Rack (Ruby) app:
+
+    $ cd puma-rack
+    $ bundle install # Install gems
+    # puma -C puma.rb
+    $ ../do-benchmark.sh http://127.0.0.1:8080/
+
 ## Kudos to
 
 - [@olegsmith](https://github.com/olegsmith) for fixing Node.js to use clustering and Erlang benchmark
