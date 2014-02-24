@@ -8,6 +8,7 @@ Comparison of raw HTTP hit performance of:
 - [Http-kit (Clojure)](http://http-kit.org/index.html)
 - [Warp (Haskell)](http://hackage.haskell.org/package/warp)
 - [Tornado](http://www.tornadoweb.org/en/stable/)
+- [Puma (Ruby)](http://puma.io/)
 
 ## Results
 
@@ -21,6 +22,7 @@ See `*-results.txt` for `wrk` benchmark results.
 | Http-kit    |              10145.90 |               34416.03 |               36520.01 |                34391.64 |
 | Warp        |              12640.29 |               27749.54 |               26365.52 |                23916.69 |
 | Tornado     |               2356.82 |                4590.33 |                4422.08 |                 4155.61 |
+| Puma        |               6196.16 |               10780.66 |               12091.95 |                10586.83 |
 
 
 ## I don't believe you!
@@ -78,4 +80,4 @@ Starting Puma + Rack (Ruby) app:
 ## Kudos to
 
 - [@olegsmith](https://github.com/olegsmith) for fixing Node.js to use clustering and Erlang benchmark
-- [@ollie](https://github.com/ollie) for Warp code
+- [@ollie](https://github.com/ollie) for Warp and Puma
