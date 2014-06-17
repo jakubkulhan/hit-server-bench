@@ -23,6 +23,7 @@ See `*-results.txt` for `wrk` benchmark results.
 | Warp        |              12640.29 |               27749.54 |               26365.52 |                23916.69 |
 | Tornado     |               2356.82 |                4590.33 |                4422.08 |                 4155.61 |
 | Puma        |               6196.16 |               10780.66 |               12091.95 |                10586.83 |
+| Netty       |              21354.85 |               67693.31 |               71727.45 |                67523.18 |
 
 
 ## I don't believe you!
@@ -75,6 +76,14 @@ Starting Puma + Rack (Ruby) app:
     $ cd puma-rack
     $ bundle install # Install gems
     # puma -C puma.rb
+    $ ../do-benchmark.sh http://127.0.0.1:8080/
+
+Starting Netty app:
+
+    $ cd netty
+    $ mvn install
+    $ mvn compile
+    $ mvn exec:java -Dexec.mainClass=NettyServer
     $ ../do-benchmark.sh http://127.0.0.1:8080/
 
 ## Kudos to
