@@ -24,6 +24,7 @@ See `*-results.txt` for `wrk` benchmark results.
 | Tornado     |               2356.82 |                4590.33 |                4422.08 |                 4155.61 |
 | Puma        |               6196.16 |               10780.66 |               12091.95 |                10586.83 |
 | Netty       |              21354.85 |               67693.31 |               71727.45 |                67523.18 |
+| Spark       |               9637.85 |               21704.97 |               22607.68 |                28059.16 |
 
 
 ## I don't believe you!
@@ -84,6 +85,14 @@ Starting Netty app:
     $ mvn install
     $ mvn compile
     $ mvn exec:java -Dexec.mainClass=NettyServer
+    $ ../do-benchmark.sh http://127.0.0.1:8080/
+
+Starting Spark app:
+
+    $ cd spark
+    $ mvn install
+    $ mvn compile
+    $ mvn exec:java -Dexec.mainClass=SparkMain
     $ ../do-benchmark.sh http://127.0.0.1:8080/
 
 ## Kudos to
