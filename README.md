@@ -27,6 +27,7 @@ See `*-results.txt` for `wrk` benchmark results.
 | Spark (Jetty) |               9637.85 |               21704.97 |               22607.68 |                28059.16 |
 | Spring Boot (Tomcat) |               5087.81 |               13472.72 |               16365.36 |                17187.06 |
 | Reactor     |              11190.68 |               31946.53 |               30796.76 |                30590.69 |
+| PHP-FPM     |               1616.16 |                   1.60 |                   6.40 |                 1427.93 |
 
 
 ## I don't believe you!
