@@ -1,4 +1,4 @@
-# Node.js vs. Spray vs. Erlang vs. Http-kit vs. Warp vs. Tornado vs. Puma
+# Hit server bench
 
 Comparison of raw HTTP hit performance of:
 
