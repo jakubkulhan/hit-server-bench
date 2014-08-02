@@ -28,6 +28,9 @@ See `*-results.txt` for `wrk` benchmark results.
 | Spring Boot (Tomcat) |               5087.81 |               13472.72 |               16365.36 |                17187.06 |
 | Reactor     |              11190.68 |               31946.53 |               30796.76 |                30590.69 |
 | PHP-FPM     |               1616.16 |                   1.60 |                   6.40 |                 1427.93 |
+| HHVM        |               1498.68 |                5584.94 |                5314.37 |                 4804.49 |
+| ReactPHP (PHP) |               1664.91 |                9570.31 |               13253.46 |                12034.07 |
+| ReactPHP (HHVM) |               1248.12 |               10987.09 |               17032.59 |                18142.91 |
 
 
 ## I don't believe you!
@@ -97,6 +100,40 @@ Starting Spark app:
     $ mvn compile
     $ mvn exec:java -Dexec.mainClass=SparkMain
     $ ../do-benchmark.sh http://127.0.0.1:8080/
+
+Starting Spring boot app:
+
+    $ cd spring-boot
+    $ mvn install
+    $ mvn compile
+    $ mvn exec:java -Dexec.mainClass=SpringBootMain
+
+Starting Reactor app:
+
+    $ cd reactor
+    $ mvn install
+    $ mvn compile
+    $ mvn exec:java -Dexec.mainClass=ReactorExample
+
+Starting PHP-FPM:
+
+    $ cd php-fpm
+    $ ./start.sh    # starts PHP-FPM and nginx
+
+Starting HHVM:
+
+    $ cd hhvm
+    $ ./start.sh    # starts HHVM and nginx
+
+Starting ReactPHP (PHP):
+
+    $ cd reactphp
+    $ ./start.sh    # starts ReactPHP using PHP and nginx
+
+Starting ReactPHP (HHVM):
+
+    $ cd reactphp
+    $ ./start.sh    # starts ReactPHP using HHVM and nginx
 
 ## Kudos to
 

@@ -1,0 +1,15 @@
+{
+    "name": "jakubkulhan/hit-server-bench",
+    "description": "Benchmark of server hits by reactphp",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jakub Kulhan",
+            "email": "jakub.kulhan@gmail.com"
+        }
+    ],
+    "require": {
+        "react/react": "0.4.*"
+    }
+}

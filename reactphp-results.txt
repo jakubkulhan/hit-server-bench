@@ -1,0 +1,39 @@
+$ wrk -t 1 -c 1 -d 10 http://localhost:8080
+Running 10s test @ http://localhost:8080
+  1 threads and 1 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.69ms    6.69ms  63.40ms   98.84%
+    Req/Sec     1.05k   146.30     1.22k    87.76%
+  9973 requests in 10.00s, 1.70MB read
+Requests/sec:    997.30
+Transfer/sec:    174.28KB
+$ wrk -t 2 -c 10 -d 10 http://localhost:8080
+Running 10s test @ http://localhost:8080
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    81.99ms   51.62ms 128.40ms   71.18%
+    Req/Sec   338.89    557.70     2.36k    75.68%
+  6958 requests in 10.00s, 1.19MB read
+  Socket errors: connect 0, read 0, write 0, timeout 30
+Requests/sec:    695.54
+Transfer/sec:    121.55KB
+$ wrk -t 10 -c 50 -d 10 http://localhost:8080
+Running 10s test @ http://localhost:8080
+  10 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.78ms    3.98ms  14.32ms   89.29%
+    Req/Sec     1.55     25.20   568.00     99.43%
+  1150 requests in 10.01s, 201.03KB read
+  Socket errors: connect 0, read 0, write 0, timeout 201
+Requests/sec:    114.94
+Transfer/sec:     20.09KB
+$ wrk -t 20 -c 100 -d 10 http://localhost:8080
+Running 10s test @ http://localhost:8080
+  20 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    22.69ms    1.56ms  23.53ms   98.25%
+    Req/Sec     2.77     30.81     0.98k    98.34%
+  1644 requests in 10.00s, 287.37KB read
+  Socket errors: connect 0, read 0, write 0, timeout 404
+Requests/sec:    164.35
+Transfer/sec:     28.73KB
