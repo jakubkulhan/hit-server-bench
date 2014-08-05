@@ -2,35 +2,35 @@ $ wrk -t 1 -c 1 -d 10 http://localhost:8080
 Running 10s test @ http://localhost:8080
   1 threads and 1 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    90.14us   60.36us   2.85ms   98.21%
-    Req/Sec    10.16k     1.59k   12.22k    70.92%
-  96372 requests in 10.00s, 11.40MB read
-Requests/sec:   9637.85
-Transfer/sec:      1.14MB
+    Latency     2.04ms   16.69ms 143.66ms   98.63%
+    Req/Sec    11.95k     3.98k   20.67k    62.59%
+  109819 requests in 10.00s, 12.99MB read
+Requests/sec:  10982.23
+Transfer/sec:      1.30MB
 $ wrk -t 2 -c 10 -d 10 http://localhost:8080
 Running 10s test @ http://localhost:8080
   2 threads and 10 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   489.88us    1.11ms  32.09ms   97.15%
-    Req/Sec    11.46k     4.68k   26.44k    70.93%
-  217051 requests in 10.00s, 25.67MB read
-Requests/sec:  21704.97
-Transfer/sec:      2.57MB
+    Latency   617.83us    4.88ms  66.61ms   99.07%
+    Req/Sec    24.47k     9.13k   44.40k    70.69%
+  445335 requests in 10.00s, 52.66MB read
+Requests/sec:  44533.38
+Transfer/sec:      5.27MB
 $ wrk -t 10 -c 50 -d 10 http://localhost:8080
 Running 10s test @ http://localhost:8080
   10 threads and 50 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     7.48ms   34.09ms 376.02ms   96.24%
-    Req/Sec     3.46k     2.48k   15.78k    71.00%
-  226044 requests in 10.00s, 26.73MB read
-Requests/sec:  22607.68
-Transfer/sec:      2.67MB
+    Latency     6.23ms   22.89ms 161.16ms   96.16%
+    Req/Sec     3.70k     2.65k   18.67k    73.16%
+  316057 requests in 9.99s, 37.38MB read
+Requests/sec:  31624.97
+Transfer/sec:      3.74MB
 $ wrk -t 20 -c 100 -d 10 http://localhost:8080
 Running 10s test @ http://localhost:8080
   20 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     6.71ms   26.11ms 257.14ms   97.52%
-    Req/Sec     1.52k   673.66     8.78k    79.52%
-  280516 requests in 10.00s, 33.17MB read
-Requests/sec:  28059.16
-Transfer/sec:      3.32MB
+    Latency     7.94ms   32.07ms 300.40ms   96.74%
+    Req/Sec     3.30k     2.62k   19.11k    77.36%
+  573660 requests in 9.99s, 67.84MB read
+Requests/sec:  57425.96
+Transfer/sec:      6.79MB

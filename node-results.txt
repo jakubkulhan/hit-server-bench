@@ -1,36 +1,36 @@
-$ wrk -t 1 -c 1 -d 10 http://127.0.0.1:8080
-Running 10s test @ http://127.0.0.1:8080
+$ wrk -t 1 -c 1 -d 10 http://localhost:8080
+Running 10s test @ http://localhost:8080
   1 threads and 1 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   101.87us   19.76us   0.98ms   94.87%
-    Req/Sec     9.14k   645.52    10.00k    80.63%
-  85907 requests in 10.00s, 12.86MB read
-Requests/sec:   8590.95
-Transfer/sec:      1.29MB
-$ wrk -t 2 -c 10 -d 10 http://127.0.0.1:8080
-Running 10s test @ http://127.0.0.1:8080
+    Latency    83.59us   48.22us   1.64ms   96.70%
+    Req/Sec    10.89k     1.63k   13.56k    67.65%
+  102153 requests in 10.00s, 15.30MB read
+Requests/sec:  10215.47
+Transfer/sec:      1.53MB
+$ wrk -t 2 -c 10 -d 10 http://localhost:8080
+Running 10s test @ http://localhost:8080
   2 threads and 10 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   485.58us  328.48us   7.84ms   87.27%
-    Req/Sec    10.45k     3.46k   16.22k    58.42%
-  196188 requests in 10.00s, 29.37MB read
-Requests/sec:  19619.37
-Transfer/sec:      2.94MB
-$ wrk -t 10 -c 50 -d 10 http://127.0.0.1:8080
-Running 10s test @ http://127.0.0.1:8080
+    Latency   253.57us  381.14us  22.33ms   94.90%
+    Req/Sec    20.42k     5.02k   38.67k    68.67%
+  384456 requests in 10.00s, 57.56MB read
+Requests/sec:  38447.10
+Transfer/sec:      5.76MB
+$ wrk -t 10 -c 50 -d 10 http://localhost:8080
+Running 10s test @ http://localhost:8080
   10 threads and 50 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     3.58ms    6.39ms  69.90ms   94.05%
-    Req/Sec     2.24k     1.61k    8.67k    79.87%
-  192187 requests in 10.00s, 28.78MB read
-Requests/sec:  19217.57
-Transfer/sec:      2.88MB
-$ wrk -t 20 -c 100 -d 10 http://127.0.0.1:8080
-Running 10s test @ http://127.0.0.1:8080
+    Latency     1.03ms    1.30ms 107.59ms   97.07%
+    Req/Sec     5.46k     1.51k   12.44k    72.03%
+  513351 requests in 9.99s, 76.86MB read
+Requests/sec:  51362.60
+Transfer/sec:      7.69MB
+$ wrk -t 20 -c 100 -d 10 http://localhost:8080
+Running 10s test @ http://localhost:8080
   20 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     7.20ms   12.85ms 133.15ms   96.73%
-    Req/Sec     1.11k   529.69     3.42k    62.68%
-  196076 requests in 10.00s, 29.36MB read
-Requests/sec:  19606.67
-Transfer/sec:      2.94MB
+    Latency     2.19ms    2.65ms 107.88ms   97.22%
+    Req/Sec     2.80k     1.29k   11.33k    79.82%
+  527134 requests in 10.00s, 78.93MB read
+Requests/sec:  52722.19
+Transfer/sec:      7.89MB
