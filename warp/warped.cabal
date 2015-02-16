@@ -8,7 +8,7 @@ synopsis:            Haskell Warp being benchmarked
 homepage:            https://github.com/jakubkulhan/hit-server-bench.git
 license:             PublicDomain
 license-file:        LICENSE
-author:              Jakub Kulhan, Changlin Li
+author:              Oldřich Vetešník, Jakub Kulhan, Changlin Li
 maintainer:          mail@changlinli.com
 -- copyright:           
 category:            Web
