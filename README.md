@@ -70,7 +70,8 @@ Starting Node.js app:
 Starting Spray (Scala) app:
 
     $ cd spray
-    $ sbt run
+    $ sbt stage
+    $ target/universal/stage/bin/server
     Open new terminal window.
     $ ../do-benchmark.sh http://127.0.0.1:8080/
 
