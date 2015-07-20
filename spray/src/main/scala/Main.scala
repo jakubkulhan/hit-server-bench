@@ -19,6 +19,10 @@ object Main extends App {
 
   implicit val system = ActorSystem()
   val server = system.actorOf(Props[ServerActor])
-  IO(Http) ! Http.Bind(server, interface = "0.0.0.0", port = 8080)
+
+  val interface = system.settings.config.getString("app.interface")
+  val port = system.settings.config.getInt("app.port")
+
+  IO(Http) ! Http.Bind(server, interface, port)
 
 }
