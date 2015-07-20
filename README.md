@@ -94,13 +94,13 @@ Starting Http-kit app:
 Starting Warp (Haskell) app:
 
     $ cd warp
-    $ ./warped
+    $ cabal run -- +RTS -N
     Open new terminal window.
     $ ../do-benchmark.sh http://127.0.0.1:8080/
 
     # To compile, run:
     $ cd warp
-    $ ghc -O3 warped.hs
+    $ cabal install warped.cabal
 
 Starting Puma + Rack (Ruby) app:
 
