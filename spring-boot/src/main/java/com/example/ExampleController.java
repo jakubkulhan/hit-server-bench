@@ -1,12 +1,11 @@
 package com.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.context.request.async.DeferredResult;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
@@ -23,14 +22,14 @@ public class ExampleController {
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/async")
-    public DeferredResult<String> indexAsync() {
-        DeferredResult<String> result = new DeferredResult<>();
+    public CompletableFuture<String> indexAsync() {
+        final CompletableFuture<String> f = new CompletableFuture<>();
 
         scheduler.schedule(() -> {
-            result.setResult(Long.toString(System.currentTimeMillis()));
+            f.complete(Long.toString(System.currentTimeMillis()));
         }, 200, TimeUnit.MILLISECONDS);
 
-        return result;
+        return f;
     }
 
 }
