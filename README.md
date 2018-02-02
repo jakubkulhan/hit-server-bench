@@ -161,5 +161,5 @@ Starting ReactPHP (HHVM):
 
 ## Kudos to
 
-- [@olegsmith](https://github.com/olegsmith) for fixing Node.js to use clustering and Erlang benchmark
+- [@olegsmetanin](https://github.com/olegsmetanin) for fixing Node.js to use clustering and Erlang benchmark
 - [@ollie](https://github.com/ollie) for Warp and Puma
