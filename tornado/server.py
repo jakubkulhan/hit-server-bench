@@ -1,9 +1,12 @@
 import tornado.ioloop
 import tornado.web
+import tornado.gen
 import tornado.httpserver
 import time
 
 class MainHandler(tornado.web.RequestHandler):
+
+    @tornado.gen.coroutine
     def get(self):
         self.write(str(int(round(time.time() * 1000))))
 
