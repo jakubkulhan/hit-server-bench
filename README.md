@@ -78,9 +78,7 @@ Starting Spray (Scala) app:
 Starting Erlang app:
 
     $ cd erlang
-    $ erl
-    $ c(erlanghttp).
-    $ erlanghttp:start().
+    $ erlc erlanghttp.erl && erl -noshell -run erlanghttp start
     Open new terminal window.
     $ ../do-benchmark.sh http://127.0.0.1:8080/
 
